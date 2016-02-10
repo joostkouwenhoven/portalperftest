@@ -14,7 +14,7 @@ object LogIn  {
 	val useCase = 
   exec(http("Get People")
 			.get("/")
-      .check(status.is(200))
+      .check(status.is(200)))
 
 
 }
