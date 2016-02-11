@@ -7,15 +7,14 @@ import jodd.util.URLDecoder
 import scala.concurrent.duration._
 
 
-object OpenApp  {
+object LogIn  {
 
-	val useCase1 = 
+	val useCase = 
         exec(
             http("Open Page")
             .get("/")
             )
-
-     val useCase2 = 
+        wait(2) 
         exec(
             http("Log In")
 			 .post("/login")
@@ -23,15 +22,4 @@ object OpenApp  {
 			 .formParam("password", "123456")
             )
             
-	val useCase3 = 
-        exec(
-            http("Get Servicess")
-		     .get("/getservices")
-             .check(status.is(200))
-            )       
-        
-    val useCase4 = 
-        exec(http("Log Out")
-		.post("/logout")
-       )
 }
