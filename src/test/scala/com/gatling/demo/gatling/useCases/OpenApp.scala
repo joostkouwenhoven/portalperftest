@@ -27,7 +27,7 @@ object OpenApp  {
         exec(
             http("Get Servicess")
 		     .get("/getservices")
-             .check.status.is(200)
+             .check(status.is(200))
             )       
         
     val useCase4 = 
