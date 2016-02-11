@@ -29,6 +29,11 @@ object Scenarios {
    * These are the scenarios run in 'debug' mode.
    */
   val debugScenario = scenario("debug")
-    .exec(OpenApp.useCase1)
+    .exec(Login.useCase)
+    .pause(2)
+    .exec(GetServices.useCase)
+    .pause(2)
+    .exec(LogOut.useCase)
+
 
 }
