@@ -16,12 +16,20 @@ object Scenarios {
   /**
    * These are the scenarios run in 'normal' mode.
    */
+ 
+   
   val acceptanceTestScenario = scenario("acceptanceTestScenario")
-    .exec(LogIn.useCase)
+    .exec(OpenApp.useCase1)
+    .pause(2)
+    .exec(OpenApp.useCase2)
+    .pause(2)
+    .exec(OpenApp.useCase3)
+    .pause(2)
+    .exec(OpenApp.useCase4)
   /**
    * These are the scenarios run in 'debug' mode.
    */
   val debugScenario = scenario("debug")
-    .exec(LogIn.useCase)
+    .exec(OpenApp.useCase1)
 
 }

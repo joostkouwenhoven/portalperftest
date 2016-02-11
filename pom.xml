@@ -46,7 +46,7 @@
         <activeProfileId>debug</activeProfileId>
 
         <!-- Settings for the LTDashboard -->
-        <application.name>GATLING</application.name>
+        <application.name>Portal</application.name>
         <application.version>1.0</application.version>
         
     </properties>
