@@ -15,9 +15,5 @@ object GetServices  {
 		     .get("/allservices")
              .check(status.is(200))
             )       
-        
-    val useCase = 
-        exec(http("Log Out")
-		.post("/logout")
-       )
+
 }
