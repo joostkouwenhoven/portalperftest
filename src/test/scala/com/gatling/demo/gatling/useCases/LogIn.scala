@@ -14,7 +14,7 @@ object LogIn  {
             http("Open Page")
             .get("/")
             )
-        wait(2) 
+        pause(2) 
         exec(
             http("Log In")
 			 .post("/login")
