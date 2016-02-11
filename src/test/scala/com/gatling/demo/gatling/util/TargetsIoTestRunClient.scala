@@ -3,7 +3,7 @@ package com.gatling.demo.gatling.util
 import com.google.gson.Gson
 import org.apache.http.client.methods.HttpPost
 import org.apache.http.entity.StringEntity
-import org.apache.http.impl.client.HttpClientBuilder
+import org.apache.http.impl.client.DefaultHttpClient
 
 object TargetsIoTestRunClient{
 
@@ -21,7 +21,7 @@ object TargetsIoTestRunClient{
     post.setEntity(new StringEntity(runningTestAsJson))
 
     // send the get request
-    val response = (new HttpClientBuilder).execute(post)
+    val response = (new DefaultHttpClient).execute(post)
 
     return response.getStatusLine().getStatusCode();
 
