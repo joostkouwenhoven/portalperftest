@@ -13,6 +13,7 @@ object OpenApp  {
         exec(
             http("Open Page")
             .get("/")
+            )
 
      val useCase2 = 
         exec(
