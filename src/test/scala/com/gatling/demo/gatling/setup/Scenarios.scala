@@ -19,13 +19,12 @@ object Scenarios {
  
    
   val acceptanceTestScenario = scenario("acceptanceTestScenario")
-    .exec(OpenApp.useCase1)
+    .exec(Login.useCase)
     .pause(2)
-    .exec(OpenApp.useCase2)
+    .exec(GetServices.useCase)
     .pause(2)
-    .exec(OpenApp.useCase3)
-    .pause(2)
-    .exec(OpenApp.useCase4)
+    .exec(LogOut.useCase)
+
   /**
    * These are the scenarios run in 'debug' mode.
    */
