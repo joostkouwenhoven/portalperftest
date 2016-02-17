@@ -20,7 +20,9 @@ object Scenarios {
    
   val acceptanceTestScenario = scenario("acceptanceTestScenario")
     .exec(LogIn.useCase)
+    .pause(2)
     .exec(GetServices.useCase)
+    .pause(2)
     .exec(LogOut.useCase)
 
   /**
@@ -28,7 +30,9 @@ object Scenarios {
    */
   val debugScenario = scenario("debug")
     .exec(LogIn.useCase)
+    .pause(2)
     .exec(GetServices.useCase)
+    .pause(2)
     .exec(LogOut.useCase)
 
 
