@@ -20,6 +20,7 @@ object LogIn  {
 			 .post("/login")
 			 .formParam("username", "joost@simtech.nl")
 			 .formParam("password", "123456")
+			 .check(status.is(200))
             )
             
 }
